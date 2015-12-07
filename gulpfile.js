@@ -36,6 +36,14 @@
             });
     });
 
+    gulp.task('img', function (cb) {
+        gulp.src(paths.source.img + '*.*')
+            .pipe(gulp.dest(paths.dist.img))
+            .on('end', function () {//完成后的回调，继续执行其他任务？
+                cb();
+            });
+    });
+
 
     gulp.task('watch', function () {
         gulp.watch(paths.source.scripts + '*.js', ['scripts']).on('change', function (event) {
@@ -67,5 +75,5 @@
 
     gulp.task('server', ['watch', 'connect', 'open']);
 
-    gulp.task('default', ['scripts']);
+    gulp.task('default', ['scripts', 'img']);
 })();

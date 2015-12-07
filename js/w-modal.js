@@ -155,7 +155,7 @@
         },
         showPreloader: function () {//TODO 有待于优化，body滚动条的处理，参考BootStrap modal.js源码
             if ($('#pre-loader').length == 0) {// TODO 集体项目修改图片路径
-                $('body').append('<div id="pre-loader" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:9999;background:rgba(0,0,0,0.5);text-align:center;"><img src="/s/images/load.gif" style="position:absolute;top:50%;" alt=""/></div>')
+                $('body').append('<div id="pre-loader" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:9999;background:rgba(0,0,0,0.5);text-align:center;"><img src="../img/load.gif" style="position:absolute;top:50%;" alt=""/></div>')
             }
         },
         hidePreloader: function () {
